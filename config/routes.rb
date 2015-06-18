@@ -2,11 +2,12 @@ Rails.application.routes.draw do
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
-  get '/dash', to: 'posts#index'
-  post '/images/new', to: 'posts#create'
-  get '/image/:id', to: 'posts#show'
-  
+  get '/posts', to: 'posts#index'
+  post '/posts/new' to: 'posts#create'
+  get '/post/:id', to: 'posts#show'
 
+  
+#
 
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
