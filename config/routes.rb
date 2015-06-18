@@ -8,9 +8,10 @@ Rails.application.routes.draw do
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
-  post 'users/register', to: 'users#register'
-  get 'user/:id', to: 'users#index'
-  get 'users', to: 'users#show'
+  post 'users/singup', to: 'users#create'
+  post 'users/login', to: 'users#login'
+  get 'user/:id', to: 'users#show'
+  get 'users', to: 'users#index'
   delete 'user/:id', to: 'users#delete'
 
 
