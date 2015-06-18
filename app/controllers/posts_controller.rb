@@ -10,7 +10,6 @@ class PostsController < ApplicationController
     @post = Post.create(image_url: params[:image_url],
                         user_id: params[:user_id],
                         answer: params[:answer],
-                        guess: params[:guess],
                         solution: params[:solution],
                         timestamps: DateTime.now)
   end
