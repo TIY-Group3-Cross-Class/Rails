@@ -14,5 +14,5 @@ class ApplicationController < ActionController::Base
         status: :unauthenticated
     end
   end
-  
+
 end

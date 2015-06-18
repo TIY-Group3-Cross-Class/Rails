@@ -31,15 +31,15 @@
 * Response:
   * Status Code: 201 if successful
   * Example success:
-  ``` {
+  ```{
   "user": {
   "id": 2,
   "username": "arfranco",
   "full_name": "Anthony Franco",
   "email": "brit@gmail.com"
+  }
 }
-}
-```
+  ```
 
 ##Show Individual User info
 * Path: `GET '/user/:id'`
@@ -90,7 +90,6 @@
 
 *Response
   *Example Response:
-
 
 
 
