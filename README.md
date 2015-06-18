@@ -48,7 +48,7 @@
 
 * Response:
   *Example success: 
-  ```{
+  ``` {
   "user": {
     "id": 2,
     "username": "arfranco",
@@ -65,7 +65,7 @@
 
 * Response
   *Example Response:
-  ```{
+  ``` {
   "users": [
     {
       "id": 2,
