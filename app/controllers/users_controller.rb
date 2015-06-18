@@ -52,7 +52,7 @@ class UsersController < ApplicationController
 
   def index
     @users = User.all
-    render json: { users: @users.as_json(only: [:email, :full_name, :username]) }
+    render json: { users: @users.as_json(only: [:email, :full_name, :username, :id]) },
     status: :ok
   end
 
@@ -60,7 +60,7 @@ class UsersController < ApplicationController
     @user = User.find(params[:username])
     if @user == current_user
       @user.destroy
-      render json: { message: 'User has been deleted'}
+      render json: { message: 'User has been deleted'},
       status: :ok
     else
       render json: { message: 'Only the user can delete his/her own account.' },
