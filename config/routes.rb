@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   get '/dash', to: 'posts#index'
-  post '/images/new' to: 'posts#create'
+  post '/images/new', to: 'posts#create'
   get '/image/:id', to: 'posts#show'
   
 
