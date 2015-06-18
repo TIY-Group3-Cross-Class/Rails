@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   get 'posts', to: 'posts#index'
-  post 'posts/new' to: 'posts#create'
+  post 'posts/new', to: 'posts#create'
   get 'post/:id', to: 'posts#show'
 
   post 'post/:id/guesses', to: 'guesses#create'
