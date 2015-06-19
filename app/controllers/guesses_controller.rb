@@ -10,7 +10,7 @@ class GuessesController < ApplicationController
     if @guess.save
       render json: { }, status: :created
     else
-      render json: { @guess.errors.full_messages },
+      render json: {message: 'bad parameters'},
         status: :unprocessable_entity
     end
   end
