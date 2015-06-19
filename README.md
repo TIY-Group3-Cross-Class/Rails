@@ -7,7 +7,6 @@
   * password: a string
   * user name: a string
   * full name: a string
-
 * Response:
   * Status Code: 201 if successful, 422 if unsuccessful
   * Example success:
@@ -29,7 +28,6 @@
   * email: a string
   * password: a string
   * user name: a string
-
 * Response:
   * Status Code: 201 if successful
   * Example success:
@@ -48,7 +46,6 @@
 * Path: `GET '/user/:id'`
 * Params:
   *User id you want to retrieve: an integer
-
 * Response:
   *Example success: 
   ``` 
@@ -65,9 +62,7 @@
 
 ##Show All Users
 * Path: `GET '/users'`
-* Params:
-  *none
-
+* Params: none
 * Response
   *Example Response:
   ``` 
@@ -120,16 +115,16 @@ Ex/ For a specific user, who has a total of 2 points, the json will appear as:
 
 
 
-### Create a Post (re: Image)
+## Create a Post (re: Image)
 
 * Path: ` POST 'posts/new' ` 
 * Params: 
   * image_url: "string"
   * answer: "string"
-* Response: 
+* Response:
   * Status Code: 200 if successful, 422 if unsuccessful
   * Example success: 
-    ``` 
+``` 
 {
   "post": {
     "id": 1,
@@ -140,22 +135,23 @@ Ex/ For a specific user, who has a total of 2 points, the json will appear as:
     "updated_at": "2015-06-19T15:12:38.162Z"
   }
 }
-    ```
-  * Example failure
-    ```
+```
+  * Example failure:
+```
 {
   "message": "Access Token not found."
 }
+```
 
-### Show a Post (re: Image)
+## Show a Post (re: Image)
 
 * Path: ` GET 'post/:id' `
 * Params: 
   * id: "integer"
 * Response:
   * Status Code: 200 if successful
-  * Example success
-    ```
+  * Example success:
+```
 {
   "id": 1,
   "image_url": "http://blog.ghost.org/content/images/2015/03/markdown-guide-1.jpg",
@@ -165,9 +161,9 @@ Ex/ For a specific user, who has a total of 2 points, the json will appear as:
   "created_at": "2015-06-19T15:12:38.162Z",
   "updated_at": "2015-06-19T15:12:38.162Z"
 }
-    ```
+```
 
-### Posts Index (re: This will show all the posts)
+## Posts Index (re: This will show all Images)
 
 You will probably not want to use this route, but it's there if you need.
 
@@ -175,8 +171,8 @@ You will probably not want to use this route, but it's there if you need.
 * Params: none
 * Response
     * Status Code: 200 if successful
-    * Example success
-      ```
+    * Example success:
+```
   [
   {
     "id": 1,
@@ -205,4 +201,4 @@ You will probably not want to use this route, but it's there if you need.
     "created_at": "2015-06-19T15:23:50.954Z",
     "updated_at": "2015-06-19T15:23:50.954Z"
   } ]
-
+```
