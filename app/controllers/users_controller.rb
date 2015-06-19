@@ -26,7 +26,7 @@ class UsersController < ApplicationController
     passhash = Digest::SHA1.hexdigest(params[:password])
     @user = User.find_by(password: passhash,
                          username: params[:username])
-    if @user.find
+    if @user
       # render json "register.json.jbuilder", status: :created
       render json: { user: @user.as_json(only: [:email, :access_token,
                                                 :full_name, 
