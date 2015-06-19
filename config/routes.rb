@@ -17,6 +17,7 @@ Rails.application.routes.draw do
 
   post 'users/signup', to: 'users#create'
   post 'users/login', to: 'users#login'
+  get 'users/scoreboard', to: 'users#scoreboard'
   get 'user/:id', to: 'users#show'
   get 'users', to: 'users#index'
   delete 'user/:id', to: 'users#delete'
