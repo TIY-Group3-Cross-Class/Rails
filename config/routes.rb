@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   get 'post/:id', to: 'posts#show'
 
   post 'post/:id/guesses', to: 'guesses#create'
+  get 'user/:id/score', to: 'guesses#score'
 
   # You can have the root of your site routed with "root"
   # root 'welcome#index'

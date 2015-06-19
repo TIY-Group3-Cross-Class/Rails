@@ -14,6 +14,12 @@ class GuessesController < ApplicationController
         status: :unprocessable_entity
     end
   end
+
+  def score
+    @user = User.find(params[:id])
+    @total_score = @user.guesses.sum(:points)
+    render json: { user: {score: @total_score, email: @user.email}}, status: :ok
+  end
 end
 
 
