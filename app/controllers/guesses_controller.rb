@@ -8,9 +8,9 @@ class GuessesController < ApplicationController
                                points: score,
                                user_id: current_user.id)
     if @guess.save
-      render json: { }, status: :created
+      render json: {guess: @guess.as_json(only: [:user_id, :post_id, :guess, :points, :created_at, :updated_at])}, status: :created
     else
-      render json: { @guess.errors.full_messages },
+      render json: {message: 'bad parameters'},
         status: :unprocessable_entity
     end
   end
