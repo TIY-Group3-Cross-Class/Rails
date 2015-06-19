@@ -94,7 +94,7 @@
 
 
 
-### Create a Post (re: Image)
+##Create a Post (re: Image)
 
 * Path: ` POST 'posts/new' ` 
 * Params: 
@@ -115,20 +115,21 @@
   }
 }
     ```
-  * Example failure
+  * Example failure:
     ```
 {
   "message": "Access Token not found."
 }
+    ```
 
-### Show a Post (re: Image)
+##Show a Post (re: Image)
 
 * Path: ` GET 'post/:id' `
 * Params: 
   * id: "integer"
 * Response:
   * Status Code: 200 if successful
-  * Example success
+  * Example success:
     ```
 {
   "id": 1,
@@ -141,7 +142,7 @@
 }
     ```
 
-### Posts Index (re: This will show all the posts)
+##Posts Index (re: This will show all the posts)
 
 You will probably not want to use this route, but it's there if you need.
 
@@ -149,7 +150,7 @@ You will probably not want to use this route, but it's there if you need.
 * Params: none
 * Response
     * Status Code: 200 if successful
-    * Example success
+    * Example success:
       ```
   [
   {
@@ -179,4 +180,4 @@ You will probably not want to use this route, but it's there if you need.
     "created_at": "2015-06-19T15:23:50.954Z",
     "updated_at": "2015-06-19T15:23:50.954Z"
   } ]
-
+      ```
