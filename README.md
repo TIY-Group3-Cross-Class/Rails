@@ -150,7 +150,7 @@ Ex/ For a specific user, who has a total of 2 points, the json will appear as:
   * id: "integer"
 * Response:
   * Status Code: 200 if successful
-  * Example success
+  * Example success:
 ```
 {
   "id": 1,
@@ -171,7 +171,7 @@ You will probably not want to use this route, but it's there if you need.
 * Params: none
 * Response
     * Status Code: 200 if successful
-    * Example success
+    * Example success:
 ```
   [
   {
