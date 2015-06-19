@@ -89,6 +89,14 @@
   *Example Response:
 
 
+##To get guesses for particular post for particular user
+* Path  POST 'post/:id/guesses'
+* Params:
+  * post_id
+
+{"guess":{"guess":"apple","points":0,"post_id":3,"user_id":2,"created_at":"2015-06-19T14:15:46.795Z","updated_at":"2015-06-19T14:15:46.795Z"}}
+
+
 
 
 
