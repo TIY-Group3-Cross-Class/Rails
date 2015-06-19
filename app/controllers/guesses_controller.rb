@@ -3,8 +3,8 @@ class GuessesController < ApplicationController
 
   def create
     @post = Post.find(params[:id])
-    score = params[:guess] == @post.answer ? 1 : 0
-    @guess = @post.guesses.new(guess: params[:guess],
+    score = params[:guess].downcase == @post.answer ? 1 : 0
+    @guess = @post.guesses.new(guess: params[:guess].downcase,
                                points: score,
                                user_id: current_user.id)
     if @guess.save
