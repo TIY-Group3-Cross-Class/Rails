@@ -100,9 +100,9 @@
 * Params: 
   * image_url: "string"
   * answer: "string"
-* Response 
+* Response: 
   * Status Code: 200 if successful, 422 if unsuccessful
-  * Example success 
+  * Example success: 
     ``` 
 {
   "post": {
@@ -126,7 +126,7 @@
 * Path: ` GET 'post/:id' `
 * Params: 
   * id: "integer"
-* Response
+* Response:
   * Status Code: 200 if successful
   * Example success
     ```
@@ -139,14 +139,15 @@
   "created_at": "2015-06-19T15:12:38.162Z",
   "updated_at": "2015-06-19T15:12:38.162Z"
 }
+    ```
 
-### Posts Index (re: will show all the posts)
+### Posts Index (re: This will show all the posts)
 
 You will probably not want to use this route, but it's there if you need.
 
-* Path ` GET 'posts' `
-  * Params: none
-  * Response
+* Path: ` GET 'posts' `
+* Params: none
+* Response
     * Status Code: 200 if successful
     * Example success
       ```
