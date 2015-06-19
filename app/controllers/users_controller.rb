@@ -23,8 +23,8 @@ class UsersController < ApplicationController
   end
 
   def login
-    # passhash = Digest::SHA1.hexdigest(params[:password])
-    @user = User.find_by(password: params[:password],
+    passhash = Digest::SHA1.hexdigest(params[:password])
+    @user = User.find_by(password: passhash,
                          username: params[:username])
     if @user
       # render json "register.json.jbuilder", status: :created
