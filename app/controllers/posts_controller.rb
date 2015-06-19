@@ -15,7 +15,7 @@ class PostsController < ApplicationController
         render json: { post: @post.as_json(only: [:id, :image_url, :answer, :solution, :created_at, :updated_at]) },
           status: :created
     else
-        render json: {error: @post.errors.full_messages },
+        render json: { error: @post.errors.full_messages },
           status: :unprocessable_entity
     end
   end
