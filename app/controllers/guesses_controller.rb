@@ -18,9 +18,9 @@ class GuessesController < ApplicationController
   def score
     @user = User.find(params[:id])
     @total_score = @user.guesses.sum(:points)
+    @user.update(total_points: @total_score)
     render json: { user: {score: @total_score, email: @user.email}}, status: :ok
   end
+
+
 end
-
-
-
