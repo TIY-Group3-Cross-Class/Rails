@@ -98,12 +98,25 @@
   *Example Response:
 
 
-##To get guesses for particular post for particular user
+##To post guesses for a particular post(i.e image) for particular user
 * Path  POST 'post/:id/guesses'
 * Params:
-  * post_id
+  * guess
+
+Ex/ If a guess of "apple" is made (for user_id 2 post_id 3) and assuming "apple" is NOT the answer, then the json will appear as:
 
 {"guess":{"guess":"apple","points":0,"post_id":3,"user_id":2,"created_at":"2015-06-19T14:15:46.795Z","updated_at":"2015-06-19T14:15:46.795Z"}}
+
+Ex/ If a guess of "apple" is made (for user_id 2 post_id 3) and assuming "apple" IS the right answer, then the json will appear as (note that points will be changed to 1 if guessed correctly):
+
+{"guess":{"guess":"apple","points":1,"post_id":3,"user_id":2,"created_at":"2015-06-19T14:15:46.795Z","updated_at":"2015-06-19T14:15:46.795Z"}}
+
+##To get individual user's total score
+* Path GET 'user/:id/score'
+
+Ex/ For a specific user, who has a total of 2 points, the json will appear as:
+
+{"user":{"score":2,"email":"test@gmail.com"}}
 
 
 

@@ -26,7 +26,7 @@ class UsersController < ApplicationController
     @user = User.find_by(email: params[:email],
                      password: passhash,
                      username: params[:username])
-    if @user
+    if @user.find
       # render json "register.json.jbuilder", status: :created
       render json: { user: @user.as_json(only: [:email, :access_token,
                                                 :full_name, 
