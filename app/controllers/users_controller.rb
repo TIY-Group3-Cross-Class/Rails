@@ -23,8 +23,8 @@ class UsersController < ApplicationController
   end
 
   def login
-    passhash = Digest::SHA1.hexdigest(params[:password])
-    @user = User.find_by(password: passhash,
+    # passhash = Digest::SHA1.hexdigest(params[:password])
+    @user = User.find_by(password: params[:password],
                          username: params[:username])
     if @user
       # render json "register.json.jbuilder", status: :created
@@ -34,7 +34,7 @@ class UsersController < ApplicationController
                                                 :id]) },
         status: :ok
     else
-      render json: { message: 'No matching email or password found.' },
+      render json: { message: 'No matching username or password found.' },
         status: :not_found
     end
   end
