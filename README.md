@@ -1,6 +1,6 @@
 # Rails API
 
-##Sign Up
+##Users Sign Up
 * Path: `POST '/users/signup'`
 * Params:
   * email: a string
@@ -11,17 +11,12 @@
 * Response:
   * Status Code: 201 if successful, 422 if unsuccessful
   * Example success:
-  ```{
-  "user": {
-    "id": 2,
-    "username": "arfranco",
-    "full_name": "Anthony Franco",
-    "email": "brit@gmail.com"
-    }
-  }
-    ```
+  ```{"user":{"id":5,"username":"whitney_hoggs","full_name":"Whitney Hoggs","email":"whitney1@gmail.com","access_token":"03c0b80efbe2b23a2c0764599ad60015"}}
+   ```
+  * Example Failure:
+  ```{"errors":["Email has already been taken"]}```
 
-##Login
+##Users Login
 * Path: `POST '/users/login'`
 * Params:
   * email: a string
@@ -33,10 +28,11 @@
   * Example success:
   ```{
   "user": {
-  "id": 2,
-  "username": "arfranco",
-  "full_name": "Anthony Franco",
-  "email": "brit@gmail.com"
+    "id": 5,
+    "username": "whitney_hoggs",
+    "full_name": "Whitney Hoggs",
+    "email": "whitney1@gmail.com",
+    "access_token": "03c0b80efbe2b23a2c0764599ad60015"
   }
 }
   ```
@@ -50,15 +46,16 @@
   *Example success: 
   ``` {
   "user": {
-    "id": 2,
-    "username": "arfranco",
-    "full_name": "Anthony Franco",
-    "email": "brit@gmail.com"
+    "id": 6,
+    "username": "whitney_hoggs2",
+    "full_name": "Whitney Hoggs",
+    "email": "whitney2@gmail.com",
+    "access_token": "d28faf6ea06d1636fe6cebf0196c2b1d"
   }
 }
   ```
 
-##All Users
+##Show All Users
 * Path: `GET '/users'`
 * Params:
   *none
