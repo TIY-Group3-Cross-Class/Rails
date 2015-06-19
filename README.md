@@ -11,12 +11,14 @@
 * Response:
   * Status Code: 201 if successful, 422 if unsuccessful
   * Example success:
-  ```{
-      "user":{"id":5,
+  ``` 
+    { "user":{
+      "id":5,
       "username":"whitney_hoggs",
       "full_name":"Whitney Hoggs",
       "email":"whitney1@gmail.com",
-      "access_token":"03c0b80efbe2b23a2c0764599ad60015"}}
+      "access_token":"03c0b80efbe2b23a2c0764599ad60015"}
+    }
    ```
   * Example Failure:
   ```{"errors":["Email has already been taken"]}```
@@ -31,8 +33,8 @@
 * Response:
   * Status Code: 201 if successful
   * Example success:
-  ```{
-    "user": {
+  ``` 
+  { "user": {
     "id": 5,
     "username": "whitney_hoggs",
     "full_name": "Whitney Hoggs",
