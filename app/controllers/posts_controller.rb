@@ -10,7 +10,7 @@ class PostsController < ApplicationController
 
   def create
     @post = current_user.posts.new(image_url: params[:image_url],
-                                   answer: params[:answer])
+                                   answer: params[:answer].downcase)
     if @post.save
         render json: { post: @post.as_json(only: [:id, :image_url, :answer, :solution, :created_at, :updated_at]) },
           status: :created
