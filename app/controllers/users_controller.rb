@@ -13,7 +13,8 @@ class UsersController < ApplicationController
                                                 :access_token, 
                                                 :full_name, 
                                                 :username, 
-                                                :id]) },
+                                                :id,
+                                                :total_points]) },
         status: :created
     else
       render json: { errors: @user.errors.full_messages },
@@ -56,9 +57,13 @@ class UsersController < ApplicationController
     status: :ok
   end
 
+  def scoreboard
+    @users = User.order(total_points: :desc).limit(5)
+  end
+
   def delete
     @user = User.find(params[:username])
-    if @user == current_user
+    if current_user.access_token == @user.access_token
       @user.destroy
       render json: { message: 'User has been deleted'},
       status: :ok
