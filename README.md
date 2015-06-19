@@ -11,7 +11,14 @@
 * Response:
   * Status Code: 201 if successful, 422 if unsuccessful
   * Example success:
-  ```{"user":{"id":5,"username":"whitney_hoggs","full_name":"Whitney Hoggs","email":"whitney1@gmail.com","access_token":"03c0b80efbe2b23a2c0764599ad60015"}}```
+  ``` {
+      "user":{
+      "id":5,
+      "username":"whitney_hoggs",
+      "full_name":"Whitney Hoggs",
+      "email":"whitney1@gmail.com",
+      "access_token":"03c0b80efbe2b23a2c0764599ad60015"}}
+      ```
   * Example Failure:
   ```{"errors":["Email has already been taken"]}```
 
@@ -25,15 +32,16 @@
 * Response:
   * Status Code: 201 if successful
   * Example success:
-  ```{
-  "user": {
+  ``` {
+    "user": {
     "id": 5,
     "username": "whitney_hoggs",
     "full_name": "Whitney Hoggs",
     "email": "whitney1@gmail.com",
     "access_token": "03c0b80efbe2b23a2c0764599ad60015"
   }
-}```
+}
+  ```
 
 ##Show Individual User info
 * Path: `GET '/user/:id'`
@@ -43,14 +51,19 @@
 * Response:
   *Example success: 
   ``` {
+<<<<<<< HEAD
   "user": {
+=======
+    "user": {
+>>>>>>> e7d326555272524801f8004b944583efa40309c9
     "id": 6,
     "username": "whitney_hoggs2",
     "full_name": "Whitney Hoggs",
     "email": "whitney2@gmail.com",
     "access_token": "d28faf6ea06d1636fe6cebf0196c2b1d"
   }
-}```
+}
+  ```
 
 ##Show All Users
 * Path: `GET '/users'`
@@ -74,7 +87,8 @@
       "email": "trevor@gmail.com"
     }
   ]
-}```
+}
+  ```
 
 ##Delete particular User
 * Path `DELETE 'user/:id'`
