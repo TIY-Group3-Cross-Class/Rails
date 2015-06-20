@@ -84,6 +84,32 @@
 }
   ```
 
+## Show User Scoreboard
+* Path: `GET 'users/scoreboard'`
+* Params: none
+* Response:
+	*Example Success: 
+	``` 
+	[
+  {
+    "username": "arfranco",
+    "total_points": 9
+  },
+  {
+    "username": "tterris",
+    "total_points": 5
+  },
+  {
+    "username": "whitney_hoggs",
+    "total_points": 3
+  },
+  {
+    "username": "whitney_hoggs2",
+    "total_points": 2
+  }
+] 
+	```
+
 ##Delete particular User
 * Path `DELETE 'user/:id'`
 * Params: 
