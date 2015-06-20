@@ -49,8 +49,7 @@
 * Response:
   *Example success: 
   ``` 
-  {
-    "user": {
+  { "user": {
     "id": 6,
     "username": "whitney_hoggs2",
     "full_name": "Whitney Hoggs",
@@ -66,8 +65,7 @@
 * Response
   *Example Response:
   ``` 
-  {
-  "users": [
+  { "users": [
     {
       "id": 2,
       "username": "arfranco",
@@ -91,20 +89,16 @@
 	*Example Success: 
 	``` 
 	[
-  {
-    "username": "arfranco",
+  { "username": "arfranco",
     "total_points": 9
   },
-  {
-    "username": "tterris",
+  { "username": "tterris",
     "total_points": 5
   },
-  {
-    "username": "whitney_hoggs",
+  { "username": "whitney_hoggs",
     "total_points": 3
   },
-  {
-    "username": "whitney_hoggs2",
+  { "username": "whitney_hoggs2",
     "total_points": 2
   }
 ] 
