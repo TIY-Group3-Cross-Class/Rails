@@ -25,7 +25,6 @@
 ##Users Login
 * Path: `POST '/users/login'`
 * Params:
-  * email: a string
   * password: a string
   * user name: a string
 * Response:
