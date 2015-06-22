@@ -3,4 +3,3 @@ class Post < ActiveRecord::Base
   belongs_to :user
 end
 
-#solution is the id of a correct guess

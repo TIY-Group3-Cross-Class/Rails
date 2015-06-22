@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
-  before_action :authenticate_user!, only: [:delete]
+  # before_action :authenticate_user!, only: [:delete]
+  ## authenticate_user! is a devise method.  must fix this.
 
   def create
     passhash = Digest::SHA1.hexdigest(params[:password])
@@ -28,7 +29,8 @@ class UsersController < ApplicationController
                          username: params[:username])
     if @user
       # render json "register.json.jbuilder", status: :created
-      render json: { user: @user.as_json(only: [:email, :access_token,
+      render json: { user: @user.as_json(only: [:email,
+                                                :access_token,
                                                 :full_name, 
                                                 :username,
                                                 :id]) },

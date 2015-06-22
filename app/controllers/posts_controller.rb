@@ -3,14 +3,14 @@ class PostsController < ApplicationController
   before_action :authenticate_with_token!
 
   def index
-    @posts = Post.all
-    render json: @posts, status: :ok
+    render json: Post.all, status: :ok
   end
 
 
   def create
     @post = current_user.posts.new(image_url: params[:image_url],
-                                   answer: params[:answer].downcase)
+                                   answer: params[:answer].downcase,
+                                   user_id: params[:user_id])
     if @post.save
         render json: { post: @post.as_json(only: [:id, :image_url, :answer, :solution, :created_at, :updated_at]) },
           status: :created
@@ -20,9 +20,14 @@ class PostsController < ApplicationController
     end
   end
 
-  def show
+  def show 
      @post = Post.find(params[:id])
      render json: @post, status: :ok
+     #if @post.solution == true
+  end
+
+  def solution
+     
   end
 
 end
