@@ -1,0 +1,7 @@
+onepost:
+  image_url: www.google.com
+  answer: google
+
+twopost:
+  image_url: www.washingtonpost.com
+  answer: newspaper
