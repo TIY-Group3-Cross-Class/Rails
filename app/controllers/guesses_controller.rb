@@ -8,15 +8,11 @@ class GuessesController < ApplicationController
                                points: score,
                                user_id: current_user.id)
 
-    # binding.pry
     if @guess.guess == @post.answer 
        @post.update(solution: true)
     end
 
-     
-
     if @guess.save
-      #@post.update(solution: true)
       render json: {guess: @guess.as_json(only: [:user_id, :post_id, :guess, :points, :created_at, :updated_at])}, status: :created
     else
       render json: {message: 'bad parameters'},
