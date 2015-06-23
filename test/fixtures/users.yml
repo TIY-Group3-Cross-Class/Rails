@@ -1,13 +1,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  username: MyString
-  full_name: MyString
-  email: MyString
-  password: MyString
+  username: arfranco
+  full_name: Anthony Franco
+  email: tony12345@yahoo.com
+  password: rails
 
 two:
-  username: MyString
-  full_name: MyString
-  email: MyString
-  password: MyString
+  username: iescobar  
+  full_name: Iliana Escobar
+  email: escobar@brown.edu
+  password: birds
