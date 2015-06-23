@@ -12,3 +12,14 @@ twoperson:
   email: tterris@abc.com
   password: efgh
 
+one:
+  username: arfranco
+  full_name: Anthony Franco
+  email: tony12345@yahoo.com
+  password: rails
+
+two:
+  username: iescobar  
+  full_name: Iliana Escobar
+  email: escobar@brown.edu
+  password: birds
