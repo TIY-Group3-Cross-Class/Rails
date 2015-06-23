@@ -1,11 +1,15 @@
 oneguess:
- guess: apple
- post: onepost
+  guess: apple
+  post: onepost
+  user: oneperson
 
 twoguess:
- guess: banana
- post: twopost
+  guess: banana
+  post: twopost
+  user: twoperson
 
 threeguess:
- guess: cherry
- post: onepost
+  guess: cherry
+  post: onepost
+  user: twoperson
+
