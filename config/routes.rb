@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   get 'posts', to: 'posts#index'
   post 'posts/new', to: 'posts#create'
   get 'post/:id', to: 'posts#show'
-
+  get 'posts/playable', to: 'posts#available'
   post 'post/:id/guesses', to: 'guesses#create'
   get 'user/:id/score', to: 'guesses#score'
 
