@@ -27,7 +27,19 @@ class PostsController < ApplicationController
   end
 
   def available
+    available_posts = []
+    @user = current_user
     @post = Post.where(solution: false)
+    # binding.pry
+    @post.each do |item|
+      if item.user_id != @user.id
+        available_posts.push(item)
+      end
+    end
+    @post = available_posts
+    # binding.pry
+    # @post = Post.where(:solution => true).where(:user_id != @user.id)
+    # @post = Post.where(:solution => true).where.not(:user_id == @user.id)
     render json: @post, status: :ok
   end
 

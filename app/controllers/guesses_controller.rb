@@ -13,7 +13,7 @@ class GuessesController < ApplicationController
     end
 
     if @guess.save
-      render json: {guess: @guess.as_json(only: [:user_id, :post_id, :guess, :points, :created_at, :updated_at])}, status: :created
+      # render json: {guess: @guess.as_json(only: [:user_id, :post_id, :guess, :points, :created_at, :updated_at])}, status: :created
     else
       render json: {message: 'bad parameters'},
         status: :unprocessable_entity
