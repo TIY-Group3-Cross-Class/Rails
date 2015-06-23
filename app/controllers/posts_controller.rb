@@ -26,8 +26,9 @@ class PostsController < ApplicationController
      #if @post.solution == true
   end
 
-  def solution
-     
+  def available
+    @post = Post.where(solution: false)
+    render json: @post, status: :ok
   end
 
 end
